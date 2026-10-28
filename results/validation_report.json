@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Singlet Normalization",
+    "passed": true,
+    "description": "Verify <S|S> = 1.0 for two-electron singlet state",
+    "numerical_metric": 2.220446049250313e-16,
+    "tolerance": 1e-14,
+    "details": "Calculated norm: 1.000000000000000, diff: 2.22e-16"
+  },
+  {
+    "name": "Projector Algebra (P_S, P_T)",
+    "passed": true,
+    "description": "Verify P_S^2 = P_S, P_T^2 = P_T, P_S + P_T = I_8, and P_S P_T = 0",
+    "numerical_metric": 1.1102230246251565e-16,
+    "tolerance": 1e-14,
+    "details": "Max algebraic discrepancy: 1.11e-16"
+  },
+  {
+    "name": "Hamiltonian Hermiticity",
+    "passed": true,
+    "description": "Verify total Hamiltonian H = H^dag in 8D Hilbert space",
+    "numerical_metric": 0.0,
+    "tolerance": 1e-14,
+    "details": "Max ||H - H^dag||: 0.00e+00"
+  },
+  {
+    "name": "Initial Density Matrix Physicality",
+    "passed": true,
+    "description": "Verify Tr[rho(0)] = 1, rho(0) = rho(0)^dag, and positivity (lambda >= 0)",
+    "numerical_metric": 2.220446049250313e-16,
+    "tolerance": 1e-14,
+    "details": "Trace: 1.000000, Min eigenvalue: 0.00e+00"
+  },
+  {
+    "name": "Unitary Norm Preservation",
+    "passed": true,
+    "description": "Verify <psi(t)|psi(t)> = 1 under unitary time evolution",
+    "numerical_metric": 2.220446049250313e-16,
+    "tolerance": 1e-14,
+    "details": "Norm at t=2.5 us: 1.000000000000000"
+  },
+  {
+    "name": "Haberkorn Yield Conservation",
+    "passed": true,
+    "description": "Verify Phi_S + Phi_T = 1.0 for general differential reaction rates (k_S != k_T)",
+    "numerical_metric": 2.220446049250313e-16,
+    "tolerance": 1e-10,
+    "details": "Phi_S: 0.488268, Phi_T: 0.511732, Total: 1.0000000000"
+  },
+  {
+    "name": "Isotropic Rotational Symmetry",
+    "passed": true,
+    "description": "Verify Delta_Phi_S = 0 (zero angular contrast) for isotropic hyperfine tensor",
+    "numerical_metric": 4.440892098500626e-16,
+    "tolerance": 1e-06,
+    "details": "Absolute yield variation across 180\u00b0: 4.44e-16"
+  },
+  {
+    "name": "Anisotropic Compass Anisotropy",
+    "passed": true,
+    "description": "Verify Delta_Phi_S > 0.01 for anisotropic axial hyperfine tensor",
+    "numerical_metric": 0.11450214008214277,
+    "tolerance": 0.01,
+    "details": "Contrast: 13.32%, Delta_Phi_S: 0.1145"
+  },
+  {
+    "name": "Qiskit vs SciPy Cross-Validation",
+    "passed": true,
+    "description": "Verify agreement between Qiskit decomposed Trotter evolution and SciPy matrix exponential",
+    "numerical_metric": 0.0013310978126489514,
+    "tolerance": 0.002,
+    "details": "SciPy: 0.295610, Qiskit (25 reps): 0.294279, Trotter discretization error: 1.33e-03"
+  },
+  {
+    "name": "Yield Integration Convergence & Tail Separation",
+    "passed": true,
+    "description": "Verify numerical quadrature converges to exact truncated yield with explicit tail reporting",
+    "numerical_metric": 2.083642502204164e-06,
+    "tolerance": 0.0001,
+    "details": "Quadrature Error: 2.08e-06, Truncation Tail at t_max=8.0 us: 1.26e-04"
+  },
+  {
+    "name": "Open-System Positivity & Survival",
+    "passed": true,
+    "description": "Verify surviving radical-pair population Tr[rho(t)] >= 0 under decoherence",
+    "numerical_metric": 0.0,
+    "tolerance": 1e-10,
+    "details": "Surviving populations remain strictly positive throughout decay."
+  },
+  {
+    "name": "Decoherence Contrast Suppression",
+    "passed": true,
+    "description": "Verify that high dephasing (gamma=10 us^-1) suppresses directional contrast",
+    "numerical_metric": 0.13242692951027937,
+    "tolerance": 0.0,
+    "details": "Ideal contrast: 13.32%, Dephased contrast: 0.07%"
+  }
+]
